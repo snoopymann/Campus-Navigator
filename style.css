@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.search-section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 16px 45px 16px 20px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #667eea;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.clear-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.clear-btn.visible {
+    display: flex;
+}
+
+.recent-searches {
+    margin-bottom: 20px;
+}
+
+.recent-searches h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.recent-item {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f5f5f5;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.recent-item:hover {
+    background: #e0e0e0;
+}
+
+.results {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.result-item {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.result-item:hover {
+    background: #f9f9f9;
+    border-color: #667eea;
+    transform: translateX(4px);
+}
+
+.result-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.result-item .faculty-name {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.result-item .location {
+    color: #666;
+    font-size: 14px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+
+.detail-row {
+    margin-bottom: 16px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 16px;
+}
+
+.detail-value.faculty {
+    color: #667eea;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .search-section {
+        padding: 20px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}

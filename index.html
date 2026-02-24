@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Navigator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Campus Navigator</h1>
+            <p class="subtitle">Find rooms and faculty across campus</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for room number or faculty name..."
+                    autocomplete="off"
+                >
+                <button id="clearBtn" class="clear-btn" title="Clear search">×</button>
+            </div>
+
+            <div id="recentSearches" class="recent-searches"></div>
+
+            <div id="results" class="results"></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
